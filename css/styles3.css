@@ -86,8 +86,8 @@
 }
 
 html {
- box-sizing: border-box;
  font-size: 10px;
+ box-sizing: border-box;
 }
 
 a {
@@ -113,14 +113,15 @@ section {
 }
 
 body {
- background: var(--dark-gunmetal);
- font-family: var(--fira-sans);
+ background: var(--dark-scarlet);
+ font-family: var(--source-code);
 }
 
 /* Header */
 
 header {
  width: 100%;
+ height: 7rem;
  position: absolute;
  top: 0;
  left: 0;
@@ -134,33 +135,29 @@ header {
  margin: 0 auto;
 }
 
-.nav__brand {
- width: 3.5rem;
-}
-
-.menu__icons {
- color: var(--silver);
- font-size: 1.8rem;
- cursor: pointer;
- transition: 420ms ease;
-}
-
-.menu__icons:hover {
- color: var(--steel-teal);
-}
-
 nav {
  width: 100%;
  display: flex;
  align-items: center;
  justify-content: space-between;
- margin: 1rem 0;
+ padding: 1rem 0;
+}
+
+.menu__icons {
+ font-size: 1.8rem;
+ color: var(--alabaster);
+ transition: 420ms ease;
+ cursor: pointer;
+}
+
+.menu__icons:hover {
+ color: var(--persian-orange);
 }
 
 .nav__list {
  width: 25rem;
  height: 100vh;
- background: var(--dark-scarlet);
+ background: var(--onyx);
  position: fixed;
  top: 0;
  right: -26rem;
@@ -169,7 +166,7 @@ nav {
  flex-direction: column;
  align-items: center;
  justify-content: center;
- transition: all 650ms ease-in-out;
+ transition: all 650ms ease-in-out, opacity 810ms ease;
  z-index: 1500;
 }
 
@@ -178,13 +175,19 @@ nav {
  opacity: 1;
 }
 
+.close {
+ position: absolute;
+ bottom: 2rem;
+ text-align: center;
+}
+
 .nav__item {
- margin: 1.5rem 0;
+ margin: 2.5rem 0;
 }
 
 .nav__link {
  font-size: 1.6rem;
- color: var(--deer);
+ color: var(--alabaster);
  text-transform: uppercase;
  transition: 420ms ease;
 }
@@ -193,11 +196,80 @@ nav {
  color: var(--persian-orange);
 }
 
-.close {
- position: absolute;
- bottom: 2rem;
- text-align: center;
+/* Hero */
+
+#hero {
+ width: 100%;
+ height: 89vh;
+ background: linear-gradient(135deg, rgba(46, 64, 87, .7) 0%, rgba(46, 64, 87, .3)) 100%, url('../img/elephant.jpeg') center no-repeat;
+ background-size: cover;
+ position: relative;
 }
+
+.main__message {
+ width: 100%;
+ max-width: 50rem;
+ color: var(--alabaster);
+ text-transform: uppercase;
+ transform: translateY(20%);
+}
+
+.main__message h3 {
+ font-size: 1.6rem;
+}
+
+.main__message h1 {
+ font-family: var(--heebo);
+ font-size: 3rem;
+ margin: 1rem 0;
+}
+
+.main__message p {
+ text-transform: lowercase;
+}
+
+.btn {
+ background-color: var(--steel-teal);
+ border-radius: 2rem;
+ font-size: 1.1rem;
+ color: var(--alabaster);
+ display: inline-block;
+ margin-top: 2.5rem;
+ padding: .8rem 2.2rem;
+ text-transform: uppercase;
+ transition: 420ms ease;
+}
+
+.btn:hover {
+ background-color: var(--persian-orange);
+ color: var(--onyx);
+}
+
+/* Forms */
+
+.form {
+ font-family: var(--titillium);
+ color: var(--alabaster);
+ font-size: 1.6rem;
+ line-height: 1.5;
+ padding: 0 2rem;
+}
+
+.form h3 {
+ font-size: 2rem;
+}
+
+.form p {
+ font-size: 1.6rem;
+ margin: 1rem 0;
+}
+
+.form__title {
+ font-size: 2rem;
+ font-weight: 600;
+}
+
+
 
 @media screen and (min-width: 600px) {
 
@@ -220,50 +292,4 @@ nav {
  .nav__item {
   margin: 0 2rem;
  }
-}
-
-/* Hero */
-
-#hero {
- width: 100%;
- height: 80vh;
- background: linear-gradient(135deg, rgba(11, 5, 0, .3) 0%, rgba(11, 5, 0, .7) 100%), url('../img/elephant.jpeg') center no-repeat;
- background-size: cover;
- position: relative;
-}
-
-.main__message {
- width: 100%;
- max-width: 50rem;
- color: var(--silver);
- text-transform: uppercase;
- transform: translateY(20%);
-}
-
-.main__message h3 {
- font-size: 1.6rem;
-}
-
-.main__message h1 {
- font-size: 3rem;
- margin: 2rem 0;
-}
-
-.main__message p {
- text-transform: lowercase;
-}
-
-.btn {
- border-radius: 2rem;
- background-color: var(--persian-orange);
- color: var(--dark-gunmetal);
- padding: .8rem 1.8rem;
- margin-top: 2rem;
- display: inline-block;
- font-size: 1.1rem;
- transition: 420ms ease;
-}
-
-.btn:hover {
- background-color: var(--tangelo);
 }
